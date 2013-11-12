@@ -1,0 +1,18 @@
+<?php
+
+// HTML initialization
+include 'templates/blocks/header.phtml';
+
+// Include « navigation »
+include 'templates/blocks/left-sidebar.phtml';
+
+
+
+// Right column (or main content)
+// Content depending on $_GET['page']
+include 'templates/pages/'.$_GET['page'].'.phtml';
+
+
+
+// HTML finalization
+include 'templates/blocks/footer.phtml';

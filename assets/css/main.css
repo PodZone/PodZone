@@ -1,0 +1,436 @@
+/*
+
+    Main.css
+    1. Reset
+    2. General
+    3. Navigation
+    4. Audio player
+*/
+
+
+/*-----------------------------------------------\
+|               1. Reset                         |
+\-----------------------------------------------*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    letter-spacing: normal;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+ul {
+    list-style-type: none;
+}
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+ins {
+    background-color:#ccc;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ccc;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #ccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*-----------------------------------------------\
+|               1. Class                         |
+\-----------------------------------------------*/
+
+.fixed-top {
+    position: fixed;
+    top:0;
+    z-index:999;
+}
+
+.navbar-search { 
+    width: 200px;
+    position: relative;
+    padding: 5px 15px;
+}
+
+.button-search {
+    display: inline-block;
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    background: none;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------\
+|               2. General                       |
+\-----------------------------------------------*/
+
+body, html {
+    background:#f5f5f5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    color: #282828;
+}
+
+body a, i {
+    color:#383838; 
+    transition:.3s;
+}
+
+body a:hover {
+    color:#121212;
+    outline: 0;
+}
+
+body i:hover {
+    cursor: pointer;
+    color:#121212; 
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #DFDFDF;
+    box-shadow:0px 3px 5px rgba(100, 100, 100, 0.49);
+}
+
+header > div, form {
+    float: left;
+}
+
+header > ul.sign {
+    line-height: 40px;
+}
+
+header > ul.sign > li {
+    display: inline-block;
+}
+
+header > ul.sign > li > a {
+    padding: 12px 20px 13px;
+    border-left: 1px solid #DFDFDF;
+}
+
+header > ul.sign > li > a:first-child {
+    margin-right: -4px;
+} 
+
+header > div.menu-button {
+    padding: 8px 15px 7px 15px;
+    border-right:1px solid #DFDFDF;
+    position: relative;
+    z-index:9999;
+}
+
+header > div.menu-button img {
+    position: relative;
+    z-index:1000000000;
+}
+
+header > div.logo {
+    width:200px;
+    height:40px;
+    text-align: center;
+    font-weight: 300;
+}
+
+header > div.logo a {
+    font-size: 26px; 
+    line-height: 38px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.form-group input {
+    width: 85%;
+    outline: none;
+    height: 15px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    line-height: 1.428571429;
+    color: #282828;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    padding-top: 40px;
+    clear:both;
+}
+
+#content > div.img-container {
+    width: 100%;
+    background-color: #e3e3e3;
+    position: relative;
+}
+
+.bottom-content {
+    position: relative;
+    overflow-x:hidden;
+}
+
+.bottom-content section {
+    display: inline-block;
+}
+
+.bottom-content section:nth-child(1){
+    width:77%;
+    border-right:1px solid #DFDFDF;
+}
+
+.bottom-content section:nth-child(2){
+    background:#ECEFF5;
+    width:23%;
+    position: absolute;
+    top:0;
+    height:100%;
+}
+
+.img-title {
+    position: absolute;
+    color: #fff;
+    z-index: 10;
+    top:300px;
+    font-size: 46px;
+    padding-left: 42px;
+    font-weight: 400;
+}
+
+#content > div.img-container > h1 {
+    margin: 0;
+}
+
+.title-head {
+    padding:15px;
+    background:#ccc;
+    position: relative;
+}
+
+.title-head h2 {
+    font-size: 1.438em;
+    font-weight: 200;
+}
+
+.title-head span {
+    position: absolute;
+    right:15px;
+    top:20px;
+}
+
+figcaption > span {
+    display: block;
+}
+
+figcaption > span {
+    line-height: 20px;
+}
+
+figcaption {
+    text-align: left;
+    line-height: 20px;
+}
+
+.titre {
+    font-size: 0.87em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.auteur {
+    font-weight: 400;
+    text-align: center;
+}
+
+.thumbnails {
+    text-align: center;
+    display: inline-block;
+    max-height:215px;
+    overflow: hidden;
+}
+
+.thumbnails li {
+    float: left;
+    margin-left: 2rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*-----------------------------------------------\
+|               4. Audio player                  |
+\-----------------------------------------------*/
+
+#wrapper > section:first-child > section:last-child > img:first-child {
+    position: relative;
+    width:230px;
+    height:230px;
+}
+
+#wrapper > section:first-child > section:last-child div {
+    text-align: center;
+    background:#fff;
+}
+
+#wrapper > section:first-child > section:last-child div img:nth-child(2){
+    margin:8px 20px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+#wrapper > section:first-child > section:last-child div img:nth-child(n+1){
+    margin:8px 20px;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+
+/*-----------------------------------------------\
+|               5. Footer                        |
+\-----------------------------------------------*/
+
+
+footer {
+    border-top: 1px solid #e3e3e3;
+    height: 42px;
+    background:#ccc;
+}
+footer ul {
+    padding-top: 15px;
+}
+footer > ul > li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+div.clearfix {
+    clear:both;
+}
+
+#filter {
+    background:rgba(12, 12, 12, 0);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:.3s; 
+}
+
+#filter.filterBlack {
+    background:rgba(12, 12, 12, .8);
+}
+
+
+/*-----------------------------------------------\
+|               5. Left sidebar                  |
+\-----------------------------------------------*/
+
+#left-sidebar {
+    width:0px;
+    height: 100vh;
+    z-index:100;
+    background:#fff;
+    position:absolute;
+    left:0;
+    transition:.3s;
+    box-shadow: 15px 0px 10px 0px rgba(0, 0, 0, .3); 
+}
+
+#left-sidebar.over {
+    width:50px;
+}
+
+#left-sidebar.open {
+    width:300px;
+}
