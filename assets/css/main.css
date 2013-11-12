@@ -399,16 +399,16 @@ div.clearfix {
 
 #filter {
     background:rgba(12, 12, 12, 0);
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
     transition:.3s; 
 }
 
 #filter.filterBlack {
     background:rgba(12, 12, 12, .8);
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
 }
 
 
@@ -419,9 +419,9 @@ div.clearfix {
 #left-sidebar {
     width:0px;
     height: 100vh;
-    z-index:100;
     background:#fff;
     position:absolute;
+    z-index:100;
     left:0;
     transition:.3s;
     box-shadow: 15px 0px 10px 0px rgba(0, 0, 0, .3); 
