@@ -255,7 +255,7 @@ form {
 
 .bottom-content {
     position: relative;
-    overflow-x:hidden;
+   
 }
 
 .bottom-content section {
@@ -269,7 +269,7 @@ form {
 
 .bottom-content section:nth-child(2){
     background:#ECEFF5;
-    width:23%;
+    width:21%;
     position: absolute;
     top:0;
     height:100%;
@@ -342,8 +342,54 @@ figcaption {
     margin-left: 2rem;
     margin-top: 15px;
     margin-bottom: 15px;
+    position: relative;
 }
 
+section.social {
+    margin-top: 10px;
+    padding: 0 15px 15px 15px;
+}
+h3.sidebar-header{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 15px;
+}
+h3.sidebar-header i {
+    vertical-align: bottom;
+    font-size: 1.438em;;
+    display: inline-block;
+    padding-right : 5px;
+}
+h3.sidebar-header span{
+    line-height: 1;
+    font-size: 1.438em;
+    font-weight: 100;
+}
+.stats {
+
+}
+
+div.container_playButton {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    border: 5px solid #000;
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    background: rgba(253,253,253,0.5);
+}
+.triangle{
+    position: relative;
+    top:6.5px;
+    vertical-align: middle;
+    left: 2.5px;
+}
 /*-----------------------------------------------\
 |               4. Audio player                  |
 \-----------------------------------------------*/
@@ -399,16 +445,16 @@ div.clearfix {
 
 #filter {
     background:rgba(12, 12, 12, 0);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     transition:.3s; 
 }
 
 #filter.filterBlack {
     background:rgba(12, 12, 12, .8);
-    position: absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
 }
 
 
@@ -417,14 +463,16 @@ div.clearfix {
 \-----------------------------------------------*/
 
 #left-sidebar {
+    margin-top: 40px;
     width:0px;
     height: 100vh;
+    z-index:100;
     background:#fff;
     position:absolute;
-    z-index:100;
     left:0;
     transition:.3s;
     box-shadow: 15px 0px 10px 0px rgba(0, 0, 0, .3); 
+    overflow-y:auto; 
 }
 
 #left-sidebar.over {
@@ -433,4 +481,40 @@ div.clearfix {
 
 #left-sidebar.open {
     width:300px;
+}
+
+.sidebar-nav {
+    height: 200px;
+    font-size: 1.438em;
+    color:#e3e3e3; 
+}
+.sidebar-nav > ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.sidebar-nav > ul > li{
+    width: 300px;
+    text-align: left;
+    border-top: 1px solid #e3e3e3;
+
+}
+.sidebar-nav > ul > li > div{
+    padding-top: 10px;
+    padding-bottom: 10px;    
+
+}
+.sidebar-nav > ul > li:first-child{
+    border-top: none;
+}
+.sidebar-nav > ul > li:last-child{
+    border-bottom: 1px solid #e3e3e3;
+}
+.sidebar-nav > ul > li > div > i{
+    margin:5px 15px 5px 15px;
+    display: inline-block; 
+    width: 15px;
+}
+.sidebar-nav > ul > li  > div > a{
+    padding-left: 30px;
 }
