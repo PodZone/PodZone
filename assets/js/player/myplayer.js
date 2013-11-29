@@ -1,7 +1,7 @@
 // Player initialization
 player.init({
 	player: '#audioPlayer',
-	volume: 0.1,
+	volume: 1,
 	bar: '#bar',
 	// Called when a player is created
 	created: function(){

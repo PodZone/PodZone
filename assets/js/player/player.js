@@ -191,9 +191,9 @@ var player = {
 	displaynotification: function(){
 		
 	},
+
 	// Post on facebook 
 	fbpublish: function(emission){
-
 		postToWall(
 			'J\'écoute actuellement un podcast sur http://PodZone.fr',
 			emission.image,
@@ -201,7 +201,6 @@ var player = {
 			'PodZone',emission.description,
 			postToWallCallBackHandler
 		);
-
 		console.log(emission);
 	}
 }

@@ -54,7 +54,7 @@
 								<td class="gap"></td>
 								<td class="numero"><?php echo $emission['number'] ?></td>
 								<td class="nom">
-									<span class="label"><a href=""><?php echo $emission['title'] ?></a></span>
+									<span class="label"><a href="<?php echo $emission['guid'] ?>" class="audioelement toplay" data-id="<?php echo $emisssion['emm_id'] ?>"><?php echo $emission['title'] ?></a></span>
 								</td>
 								<td class="duree">
 									<span class="label"><?php echo $emission['duration'] ?></span>
@@ -69,9 +69,10 @@
 									</button>
 								</td>
 								<td class="download">
+									<a href="<?php echo $emission['guid'] ?>">
 									<button class="btn btn-download">
 										<i class="fa fa-download"></i>
-									</button>
+									</button></a>
 								</td>
 							</tr>
 						<?php endforeach ?>
@@ -89,11 +90,17 @@
 	</footer>
 	</div>
 	<div id="filter"></div>
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="<?php echo $js_dir; ?>reload.js"></script>
-	<script src="<?php echo $js_dir; ?>layout.js"></script>
-	<script src="<?php echo $js_dir; ?>player/player.js"></script>
-	<script src="<?php echo $js_dir; ?>player/myplayer.js"></script>
+	<?php if(!isset($_GET['rel'])): ?>
+		<script src="<?php echo $js_dir; ?>reload.js?<?php echo time(); ?>"></script>
+	<?php endif; ?>
+	<script src="<?php echo $js_dir; ?>search.js?<?php echo time(); ?>"></script>
+	<script src="<?php echo $js_dir; ?>layout.js?<?php echo time(); ?>"></script>
+	<script src="<?php echo $js_dir; ?>player/player.js?<?php echo time(); ?>"></script>
+	<script src="<?php echo $js_dir; ?>player/myplayer.js?<?php echo time(); ?>"></script>
+	<script src="<?php echo $js_dir; ?>connexionFB.js?<?php echo time(); ?>"></script>
+
 <!--
 	<script>
 		var consumerKey    = encodeURIComponent('dTzaY0nqEuBJ3nOxyNt8gA');

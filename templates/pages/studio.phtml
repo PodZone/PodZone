@@ -67,12 +67,16 @@
 	</footer>
 
 	<div id="filter"></div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="<?php echo $js_dir; ?>jquery.carouFredSel-6.2.1.js"></script>
-	<script src="<?php echo $js_dir; ?>carousel.js"></script>
-	<script src="<?php echo $js_dir; ?>reload.js"></script>
-	<script src="<?php echo $js_dir; ?>layout.js"></script>
-	<script src="<?php echo $js_dir; ?>player/player.js"></script>
-	<script src="<?php echo $js_dir; ?>player/myplayer.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<?php if(!isset($_GET['rel'])): ?>
+	<script src="<?php echo $js_dir; ?>reload.js?<?php echo time(); ?>"></script>
+<?php endif; ?>
+<script src="<?php echo $js_dir; ?>search.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>layout.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>player/player.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>player/myplayer.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>connexionFB.js?<?php echo time(); ?>"></script>
+
 </body>
 </html>
