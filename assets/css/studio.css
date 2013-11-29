@@ -1,0 +1,179 @@
+.audio-content {
+	 position: relative;
+}
+.studiofilter {
+	width:100%;
+	height:100%;
+	background:rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top:0;left:0;
+	z-index:1;
+}
+
+.studio-content {
+	padding-bottom: 45px;
+	min-height:1000px;
+}
+
+
+#studioprez {
+	margin: 40px 15%;
+	
+}
+.studio-infos {
+	padding-bottom: 40px;
+	margin-top: 15px;
+	border-radius: 5px;
+	background-color:rgba(0,0,0,0.60);
+	color: #f5f5f5;
+	box-shadow:  0 0 2px 3px rgba(0,0,0,0.3);
+	border: 1px solid #2C2C2C; 
+	background-image: url(../img/noise.png);
+
+}
+.studio-infos p {
+	height: auto;
+	text-align: justify;
+	line-height: 25px;
+	padding: 15px 15px;
+	font-weight: 200;
+}
+.studio-infos h2{
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 60px;
+	padding: 0 15px;
+	float: left;
+	text-shadow: 2px 2px #2C2C2C;
+}
+.studiologo {
+	width:500px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.studio-head {
+	height: 60px;
+	border-bottom: 1px solid #2C2C2C;
+}
+.social-group {
+	display: inline-block;
+	float: right;
+	line-height: 60px;
+}
+.social-group button {	
+	font-size: 2em;
+	color: #fff;
+	background: none;
+	border: none;
+	padding: 10px 15px;
+	border-left: 1px solid #2C2C2C;
+}
+.social-group button i {
+	text-shadow: 2px 2px #2C2C2C;
+}
+#studiopodcasts h2 {
+	color: #f5f5f5;
+	line-height: 50px;
+	font-weight: 400;
+	font-size: 1.2em;
+	text-shadow: 2px 2px #2C2C2C;
+}
+#studiopodcasts {
+	margin:0 15%;
+}
+.episodes figure{
+	background: transparent;
+	padding: 0;
+}
+.episodes {
+	border-radius: 5px;
+	background-color:rgba(0,0,0,0.60);
+	color: #f5f5f5;
+	text-align: center;
+	box-shadow:  0 0 2px 3px rgba(0,0,0,0.3);
+	border: 1px solid #2C2C2C; 
+	background-image: url(../img/noise.png);
+}
+.episodes li {
+	width: 150px;
+	padding: 0 15px;
+	display: inline-block;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.episodes img {
+	box-shadow: 3px 2px 2px 3px rgba(0,0,0,0.15);
+}
+
+.episodes figcaption p {
+	text-align: center;
+}
+
+.episodes figcaption p a{
+	color: #fff;
+	line-height: 20px;
+}
+.episodes figcaption span:nth-child(1){
+	font-size: 0.750em;
+} 
+.episodes figcaption span:nth-child(2){
+	font-size: 0.8em;
+} 
+.episodes figcaption{
+	text-align: left;
+}
+
+@media (max-width:700px){
+	img.studiologo {
+		width:100%;
+	}
+}
+
+#tweets{
+	margin: 0 15%;
+	background-color: #F5F5F5;
+	border-radius: 5px;
+	border: 1px solid #DFDFDF;
+	box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
+	background-image: url(../img/noise.png);
+}
+
+.tweet{
+	padding: 15px 25px;
+	display:block;
+	text-align: justify;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+.tweet i{
+	display: inline-block;
+	line-height: 30px;
+	font-weight: 600;
+}
+p.tweet{
+	line-height: 25px;
+}
+.tweet a {
+	color:#0084B4;
+}
+
+.tweet a:hover{
+	text-decoration: underline;
+}
+#tweetTitle{
+	margin: 40px 15% 0;
+	height: 60px;
+	line-height: 60px;
+}
+
+#tweetTitle h2{
+	font-weight: 200;
+	font-size: 1.2em;
+	text-shadow: 2px 2px #2C2C2C;
+	color: #FFF;
+}
+
+.social-group button{
+	cursor: pointer;
+}

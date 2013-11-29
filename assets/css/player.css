@@ -1,0 +1,291 @@
+#audioPlayer {
+	display: none;
+	position: absolute;
+	bottom:0px;
+	margin:0; padding:0;
+	width:310px;
+	z-index:99;
+}
+
+.extend{
+	width: 310px;
+	height: 28px;
+	background: #fff;
+	cursor: pointer;
+}
+.extend h3{
+	font-weight: 400;
+	font-size: 0.9em;
+	height: 30px;
+	line-height: 30px;
+	padding-right: 15px;
+	box-sizing:border-box;
+	width: 310px;
+	color: #686868;
+	text-align: right;
+	border-top: 1px solid #DFDFDF;
+	border-bottom: 1px solid #DFDFDF;
+}
+p.extend {
+	text-align: right;
+	background:#121212;
+	color:#fff;
+	font-size: .45em;
+	font-weight: bold;
+	padding:5px;
+	cursor:pointer;
+}
+
+#audioPlayer img {
+	width:220px;
+	max-height:220px;
+	display: block;
+	margin: 0 auto;
+}
+#audioinfos {
+	display: block;
+	bottom: 80px;
+	position: absolute;
+	width: 310px;
+	height: 30px;
+	line-height: 40px;
+	background: #F6F6F6;
+	border: 1px solid #DFDFDF;
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+	text-align: center;
+}
+
+#audioinfos p {
+	width: 310px;
+	max-width: 310px;
+	line-height: 30px;
+	word-wrap: break-word;
+	box-sizing:border-box;
+	font-size: 0.750em;
+	margin: 0;
+}
+#audiotitle {
+	display: block;
+	height: 30px;
+	width: 310px;
+	background: #fff;
+	border: 1px solid #DFDFDF;
+	text-indent: 30px;
+	line-height: 30px;
+}
+#audiotitle h3{
+	color: #cd697a;
+}
+#audiotitle span {
+	padding-left: 5px;
+}
+
+#playerimg{
+	width: 310px;
+	max-width: 310px;
+	background: #000;
+	z-index: 99;
+	padding-bottom: 110px;
+}
+
+
+#controls {
+	height: 40px;
+	line-height: 32px;
+	position: absolute;
+	bottom: 40px; 
+	background: #F5F5F5;
+	width: 310px;
+	text-align: center;
+
+}
+
+#controls button {
+	outline: none;
+	cursor: pointer;
+	background: #e27689;
+	border: 1px solid #cd697a;
+	border-radius:5px;
+	font-size: 1em;
+	height: 25px;
+	box-shadow: none;
+	color: #fff;
+	vertical-align:middle;
+}
+
+#extended{
+	float: right;
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+	height: 342px;
+	position: absolute;
+	bottom: 0;
+	transition:.3s;
+	box-sizing:border-box;
+	display: none;
+}
+#extended:hover{position: fixed;}
+/*
+#extended {
+	background:#fff;
+	height:342px;
+	position: fixed;
+	width:100%;
+	bottom:1px;
+	transition:.3s;
+	z-index:98;
+	display: none;
+	overflow:hidden;
+}
+*/
+#extended.playlistfull {
+	display: block;
+	z-index:98;
+	width:100%;
+	float: right;
+	position: fixed;
+	bottom: 0;
+}
+
+#extended table, #extended tr, #extended th, #extended td {
+	border-collapse: collapse;
+}
+
+#extended table {
+	position: relative;
+	width:100%;
+	height: 100%;
+	border-collapse: collapse;
+	box-sizing:border-box;
+}
+
+.out{
+	position: relative;
+}
+
+.scrollable{
+	overflow: auto;
+	height: 19em;
+	box-shadow:  inset 1px 0px 20px rgba(0, 0, 0, 0.350);
+}
+
+
+#extended tbody tr:nth-child(even){
+	background:#f1f1f1;
+}
+
+#extended thead {
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #ccc;
+}
+#extended thead tr {
+	background-color: #f5f5f5;
+}
+#extended thead tr th{
+	font-weight: 600;
+}
+
+#extended td:nth-child(1), #extended th:nth-child(1){width:3%; text-align: center;}
+#extended td:nth-child(2), #extended th:nth-child(2){width:37%; text-align: left;}
+#extended td:nth-child(3), #extended th:nth-child(3){width:50%; text-align:left;}
+#extended td:nth-child(4), #extended th:nth-child(4){width:10%; text-align: center;}
+
+
+#extended tr {
+	transition:.3s;
+	cursor: pointer;
+	line-height: 40px;
+	height: 40px;
+}
+
+#extended tbody tr:hover {
+	background-color:#cd697a;
+	color:#efefef;
+}
+
+#extended tr:last-child{border-bottom: 1px solid #aaa;}
+
+.scroll{
+	overflow-y: scroll;
+}
+#playlist {
+	position: relative;
+	margin-left:300px;
+	height: 60px;
+	line-height: 60px;
+}
+
+#playlist i {
+	font-size: 1.5em;
+	width: 30px;
+	height: 30px;
+	padding: 0 20px;
+	transition:.2s;
+}
+
+#playlist h3 {
+	font-weight: 500;
+	font-size: 1.5em;
+	color: #cd697a;
+	display: inline-block;
+}
+
+.playlist-head i{
+	color: #cd697a;
+}
+
+
+
+#bar {
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	display: block;
+	border-top:1px solid #aaa;
+	background:#cd697a;
+	height:35px;
+}
+
+#progressbar {
+	width: 75%%;
+	height:8px;
+	position: absolute;
+	top:13px;
+	margin-left:325px;
+	background:#F9BBC5;
+	border: 1px solid #cd697a;
+	border-radius: 6px;
+}
+
+.buffer {
+	background:#F7DEE2;
+	position: absolute;
+	left:0;
+	top:0;
+	height:8px;
+	border-radius: 6px;
+	z-index:109;
+}
+
+.progress {
+	background:#fff;
+	position: absolute;
+	left:0;
+	top:0; 
+	height:6px;
+	border-radius: 6px;
+	border: 1px solid #E27689;
+	z-index:110;
+}
+
+#time {
+	position: absolute;
+	right:15px;
+	top:12px;
+	color:#fff;
+	font-size: .8em;
+}
+

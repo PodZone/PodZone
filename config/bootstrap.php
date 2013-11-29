@@ -1,9 +1,8 @@
 <?php
 
 # Database Connexion
-//$db = connexion();
+$db = connexion();
 
-$path = explode('/', $_SERVER['PHP_SELF']);
 # Root URL
 $url = 'http://'.$_SERVER['SERVER_NAME'].'/';
 # media dir

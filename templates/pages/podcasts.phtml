@@ -1,116 +1,120 @@
-<div id="content">
-		
-		<div class="bottom-content">
-			<ul class="thumbnails">
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>LesPlanetes.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>loljapon.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>e-Dixit.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>MorceauxChoisis.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>GaleriaLudica.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast></a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>PoR01/HotlineGianni.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>PoR01/BoudoirGambetta.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>PoR01/EmissionsSpeciales.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>PoR01/InferieurATrois.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast</a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<figure>
-							<img src="<?php echo $img_dir; ?>PoR01/PasseLeStick.jpg" alt="Podcast1" width="150" height="150">
-							<figcaption>
-								<span class="auteur"><a href="">Auteur du podcast></a></span>
-								<span class="titre"><a href="">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-			</ul>
+	<div class="podcast-content">
+		<div id="podcast-top">
+			<div id="podcastprez">
+				<div class="podcast-img">
+					<img class="podcast" src="<?php echo $podcast['image'] ?>" onmousedown="return false;" />
+				</div>
+				<div class="podcast-infos">
+					<div class="podcast-title">
+						<h1><?php echo $podcast['podcast_title'] ?></h1>
+						<h3><a href=""><?php echo $podcast['author'] ?></a></h3> 
+					</div>
+					<div class="podcast-desc"> 
+						<h2>Description</h2>
+						<p><?php echo $podcast['description'] ?></p>
+					</div>
+				</div>
+			</div>
 		</div>
+		<div class="podcast-grid">
+			<div class="grid-toolbar">
+			</div>
+			<table class="podcast-table">
+				<thead>
+					<tr>
+						<th class="first"></th>
+						<th class="gap"></th>
+						<th class="numero">
+							<span class="label">N°</span>
+						</th>
+						<th class="nom">
+							<span class="handler"></span>
+							<span class="label">Nom</span>
+						</th>
+						<th class="duree">
+							<span class="label">Durée</span>
+						</th>
+						<th class="sortie">
+							<span class="label">Sortie</span>
+						</th>
+						<th>
+							<span class="label">Description</span>
+						</th>
+						<th class="add-playlist">
+							<span class="label"><i class="fa fa-plus"></i></span>
+						</th>
+						<th class="download">
+							<span class="label"><i class="fa fa-download"></i></span>
+						</th>	
+					</tr>
+					<tbody>
+						<?php foreach ($emissions as $emission): ?>
+							<tr class="podcast-item">
+								<td class="first"><i class="fa fa-play"></i></td>
+								<td class="gap"></td>
+								<td class="numero"><?php echo $emission['number'] ?></td>
+								<td class="nom">
+									<span class="label"><a href=""><?php echo $emission['title'] ?></a></span>
+								</td>
+								<td class="duree">
+									<span class="label"><?php echo $emission['duration'] ?></span>
+								</td>
+								<td class="sortie">
+									<span class="label"><?php echo $emission['podcast_pubdate'] ?></span>
+								</td>
+								<td class="desc"><?php echo substr($emission['description'], 0, -165); ?>...</td>
+								<td class="add-playlist">
+									<button class="btn btn-add">
+										<i class="fa fa-plus"></i>
+									</button>
+								</td>
+								<td class="download">
+									<button class="btn btn-download">
+										<i class="fa fa-download"></i>
+									</button>
+								</td>
+							</tr>
+						<?php endforeach ?>
+					</tbody>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<footer>
+		<ul>
+			<li><a href="">Contact</a></li>
+			<li><a href="">Mentions Légales</a></li>
+		</ul>
+	</footer>
+	</div>
+	<div id="filter"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="<?php echo $js_dir; ?>reload.js"></script>
+	<script src="<?php echo $js_dir; ?>layout.js"></script>
+	<script src="<?php echo $js_dir; ?>player/player.js"></script>
+	<script src="<?php echo $js_dir; ?>player/myplayer.js"></script>
+<!--
+	<script>
+		var consumerKey    = encodeURIComponent('dTzaY0nqEuBJ3nOxyNt8gA');
+        var consumerSecret = encodeURIComponent('bl7sX7HBzFk7oApAuRHassTWRpmPIlR0dsVbCTkzac');
+        var credentials    = btoa(consumerKey + ':' + consumerSecret);
+        $.ajax({
+        	method: 'GET',
+        	headers: {
+              	'Authorization': 'Basic ' + credentials,
+              	'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'        		
+        	},
+        	url: 'http://api.twitter.com/1.1/statuses/user_timeline.json',
+        	params: {
+        		screen_name: 'radio01net',
+        		count: 10
+        	},
+        	success: function(data){
+        		console.log(data);
+        	}
+        });
+	</script>
+-->
+</body>
+</html>

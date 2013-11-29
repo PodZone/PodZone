@@ -4,4 +4,4 @@ RewriteRule ^$ index.php?page=accueil [L]
 RewriteRule ^([a-zA-Z0-9-]*)/$ index.php?page=$1 [L]
 
 RewriteRule ^podcasts/([a-zA-Z0-9-]*)/$ index.php?page=studio&studio=$1 [L]
-RewriteRule ^podcasts/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/$ index.php?page=studio&studio=$1&emission=$2 [L]
+RewriteRule ^podcasts/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/$ index.php?page=podcasts&studio=$1&podcast=$2 [L]

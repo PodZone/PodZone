@@ -1,0 +1,151 @@
+
+.podcast-content {
+	padding-bottom: 45px;
+	min-height:1000px;
+	background-color:  #F2F2F2;
+    background:  url(../img/noise.png);
+}
+.podcast-img img{
+	width: 250px;
+	height: 250px;
+	margin: 25px;
+	box-shadow:  0 0.2em 0.5em 0 rgba(0, 0, 0, 0.25);
+}
+.podcast-img{
+	float: left;
+}
+
+#podcast-top{
+	padding-top: 45px;
+}
+
+.podcast-grid, #podcastprez, .podcast-table{
+	min-width: 750px;
+}
+#podcastprez{
+	margin: 0 15%;
+	padding: 15px;
+	height: 300px;
+	background: #fff;
+}
+
+.podcast-desc h2{
+	padding: 0 30px; 
+	font-size: 1.2em; 
+	font-weight: 400;
+}
+.podcast-desc{
+	margin-top: 35px;
+}
+.podcast-desc p{
+	text-align: justify;
+	padding: 15px 30px;
+	font-size: .9em;
+	line-height: 20px;
+}
+.podcasts-list {
+	background: #fff;
+	margin: 0 15%;
+}
+.podcast-title h1{
+	font-size: 2em;
+	text-shadow: 2px 2px rgba(255,255,255,0.8);
+	padding: 20px 30px;
+}
+.podcast-title h3{
+	font-size: 1.5em;
+	font-weight: 200;
+	padding: 0 30px;
+}
+.podcast-grid{
+	margin: 0 15%;
+}
+.podcast-grid thead th .label{
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.podcast-grid thead{
+	background-color: #f5f5f5;
+	height: 40px;
+}
+
+.podcast-grid thead th {
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 40px;
+}
+.podcast-grid thead th.add-playlist{
+	padding: 0 5px;
+	text-indent: 1px;
+}
+.podcast-grid thead th.download{
+	text-indent: 1px;
+	padding: 0 5px;
+}
+.podcast-table{
+	width: 100%;
+	min-width: 750px;
+}
+
+.podcast-table th, .podcast-table td {
+	color: #686868;
+	height: 30px;
+	padding: 2.5px 5px;
+	text-align: left;
+}
+.podcast-table tbody{
+	background-color: #fff;
+	border:1px solid #DFDFDF;
+}
+
+.podcast-table tbody tr:nth-child(even){
+	background-color: #f1f1f1;
+}
+
+.podcast-table tbody tr td{
+	font-size: 0.9em;
+	line-height: 20px;
+}
+.podcast-table tbody td{
+	vertical-align: middle;
+}
+td.first {
+	padding-left: 10px;
+}
+td.first i{
+	cursor: pointer;
+}
+td.first i:hover{
+	color: #cd697a;
+}
+
+td.nom span a{
+	color: #cd697a;
+	font-weight: 600;
+}
+td.nom span a:hover{
+	text-decoration: underline;
+}
+
+td.numero {
+	font-weight: 600;
+}
+
+td.add-playlist .btn-add{
+	background-color: #e27689;
+	border: 1px solid #cd697a;
+}
+.btn{
+	border-radius: 3px;
+	padding: 4px 6px;
+	cursor: pointer;
+}
+td.add-playlist i, td.download i{
+	color: #f5f5f5;
+	text-shadow: 0.015em 0.015em rgba(0, 0, 0, 0.300);
+}
+td.download .btn-download{
+	background-color: #383838;
+	border: 1px solid #DFDFDF;
+}

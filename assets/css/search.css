@@ -1,0 +1,47 @@
+#search-results {
+	display: none;
+	position: absolute;
+	margin: 0 15%;
+	background: #fff;
+	border-radius: 5px;
+	padding: 45px 30px 30px;
+
+}
+
+#search-results h3 {
+	line-height: 60px;
+	font-size: 2em;
+	font-weight: 600;
+	color: #383838;
+}
+
+#results {
+	position: relative;
+	background: #F5F5F5;
+	border-radius: 5px;
+	border: 1px solid #DFDFDF;
+	padding: 15px 30px;
+
+}
+#results h4 a{
+	font-size: 1.2em;
+	color: #E27689;
+	line-height: 40px;
+}
+#results h4 a:hover{
+	text-decoration: underline;
+}
+#results p{
+	padding-bottom: 15px;
+	text-align: justify;
+	line-height: 25px;
+}
+
+#result .close{
+
+}
+#podcasts-find {
+	font-size: 1.5em;
+	font-weight: 500;
+	padding:15px 0;
+}

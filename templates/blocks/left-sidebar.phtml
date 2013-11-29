@@ -1,41 +1,74 @@
-		<section id="left-sidebar">
+<div id="extended"> 
+		<div id="playlist">
+			<div class="playlist-head">
+				<i class="fa fa-music"></i>
+				<h3>Liste de lecture courante</h3>
+			</div>
+			<div class="out">
+				<div class="scrollable">
+					<table>
+						<thead>
+							<th></th>
+							<th>Podcast</th>
+							<th>Titre</th>
+							<th>Durée</th>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+		</div>
+		<div id="bar">
+			<div id="progressbar">
+				<div class="progress"></div>
+				<div class="buffer"></div>
+			</div>
+			<div id="time">
+				<span>00:00</span>/<span>00:00</span>
+			</div>
+		</div>
+	</div>
+<section id="left-sidebar">
+	<nav class="sidebar-nav">
+		<ul class="nav">
+			<li>
+				<a href="/accueil/" class="active"><i class="fa fa-home"></i>Accueil</a>
+			</li>
+			<!-- <li>
+				<a href="/playlist/"><i class="fa fa-music"></i>Playlist</a>		
+			</li>
+			<li>
+				<a href="/explorer/"><i class="fa fa-music"></i>Playlist</a>		
+			</li>
+			<li>
+				<a href="/participer/"><i class="fa fa-music"></i>Playlist</a>		
+			</li> -->
+		</ul>
+		<button id="smallplayer"></button>
+	</nav>
+	<section id="audioPlayer">
+		<div class="extend">
+			<h3>Étendre <i class="fa fa-sign-in"></i></h3>
+		</div>	
+		<audio>
+			<source src="" type="audio/mpeg"></source>
+		</audio>
+		<div id="audiotitle"></div>	
+		<div id="playerimg"></div>
+		<div id="audioinfos"></div>
+		<div id="controls">
+			<button>
+				<i class="fa fa-play playpause"></i>
+			</button>
+			<button>
+				<i class="fa fa-stop stop"></i>
+			</button>	
+			<button>
+				<i class="fa fa-step-forward next"></i>
+			</button>		
+		</div>
+	</section>
+	<script src="<?php echo $js_dir ?>times.js"></script>
+</section>
 
-
-			<nav class="sidebar-nav">
-				<ul>
-					<li>
-						<div>
-							<i class="fa fa-home"></i>
-							<a href="#">Accueil</a>
-						</div>	
-					</li>
-					<li>
-						<div>
-							<i class="fa fa-microphone"></i>
-							<a href="#">Podcasts</a>
-						</div>	
-					</li>
-					<li>
-						<div>
-							<i class="fa fa-music"></i>
-							<a href="#">Playlist</a>
-						</div>
-					</li>
-					<li>
-						<div>
-							<i class="fa fa-upload"></i>
-							<a href="#">Upload</a>
-						</div>							
-					</li>
-					<li>
-						<div>
-							<i class="fa fa-group"></i>
-							<a href="#">Amis</a>
-						</div>
-					</li>
-				</ul>
-			</nav>
-
-
-		</section>
-	

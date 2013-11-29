@@ -1,5 +1,6 @@
 <?php
 
+
 # Starting session
 session_start();
 
@@ -9,7 +10,6 @@ foreach (glob("functions/*.php") as $filename)
     include $filename;
 }
 
-# Main variables
 include 'config/bootstrap.php';
 
 # Including controller
@@ -29,5 +29,11 @@ else
 	include 'controllers/404Controller.php';
 }
 
-// Including main layout
-include 'layout/layout.phtml';
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+{
+	include 'templates/pages/'.$_GET['page'].'.phtml';
+}
+else
+{
+	include 'layout/layout.phtml';
+}

@@ -1,1 +1,78 @@
-Studio <?php echo $_GET['studio']; ?>
+	<div id="content" class="studio-content" style="background:url('<?php echo $studio['couverture']; ?>') center center no-repeat; background-size:100% 100%; background-attachment:fixed">
+		<div id="studiotop">
+			<div id="studioprez">
+				<img class="studiologo" alt="<?php echo $studio['name']; ?>" src="<?php echo $studio['logo']; ?>" onmousedown="return false;" />
+				<div class="studio-infos">
+					<div class="studio-head">
+						<h2>Description</h2>
+						<div class="social-group">
+							<button><i class="fa fa-facebook-square"></i></button>
+							<button><i class="fa fa-twitter-square"></i></button>
+						</div>
+					</div>
+					<p><?php echo $studio['description']; ?></p>
+				</div>
+			</div>
+			<div id="studiopodcasts">
+				<h2>Tous les podcasts</h2>	
+				<ul class="episodes">
+					<?php foreach ($podcasts as $podcast): ?>
+						<li>
+							<figure>
+								<a href="http://dev.podzone.fr/podcasts/<?php echo $studio['name'] ?>/<?php echo slugify(str_replace(' ', '', $podcast['podcast_title'])); ?>/">
+									<img src="<?php echo $podcast['image'] ?>" alt="<?php echo $podcast['podcast_title'] ?>" width="150" height="150" />
+								</a>
+								<figcaption>
+									<p><a href="<?php echo $podcast['link'] ?>/"><?php echo $podcast['podcast_title'] ?>"</a></p>
+								</figcaption>
+							</figure>
+						</li>
+					<?php endforeach ?>			
+				</ul>
+			</div>
+			<div id="tweetTitle">
+					<h2>Les derniers tweets</h2>
+			</div>	
+			<div id="tweets">
+					<?php 
+
+					    $consumer_key       = 'dTzaY0nqEuBJ3nOxyNt8gA'; 
+					    $consumer_secret    = 'bl7sX7HBzFk7oApAuRHassTWRpmPIlR0dsVbCTkzac'; 
+					    $oauth_token        = '251517883-o9i68aZuN9hq67ln1ysmvL27N9WGQrtMYjffusEI'; 
+					    $oauth_token_secret = '3c3Q26iyqxBg8qaoNli4JcmH7MUURRnuWsDkEjefHQXAT'; 
+
+					    $connection = new TwitterOAuth($consumer_key, $consumer_secret, $oauth_token, $oauth_token_secret);
+
+					    $query = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$studio['twitter'].'&count=5';
+					    $content = $connection->get($query);
+					    setlocale(LC_TIME, 'fr_FR');
+
+					    if(!empty($content)){ 
+					    	foreach($content as $tweet){ ?>
+					    		<p class='tweet'>
+					    			<i>Le <?php echo strftime("%d %B à %H:%M",strtotime($tweet->created_at)); ?> :</i><br />
+					    			<?php echo parseTweet($tweet->text); ?>
+					    		</p>
+
+						<?php } } ?>			
+			</div>			
+		</div>
+	</div>
+
+	<footer>
+		<ul>
+			<li><a href="">Contact</a></li>
+			<li><a href="">Mentions Légales</a></li>
+		</ul>
+	</footer>
+
+	<div id="filter"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="<?php echo $js_dir; ?>jquery.carouFredSel-6.2.1.js"></script>
+	<script src="<?php echo $js_dir; ?>carousel.js"></script>
+	<script src="<?php echo $js_dir; ?>reload.js"></script>
+	<script src="<?php echo $js_dir; ?>layout.js"></script>
+	<script src="<?php echo $js_dir; ?>player/player.js"></script>
+	<script src="<?php echo $js_dir; ?>player/myplayer.js"></script>
+</body>
+</html>

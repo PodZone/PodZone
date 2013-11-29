@@ -1,238 +1,102 @@
-	<div id="content">
-		<div class="img-container">
-			<img src="<?php echo $img_dir; ?>radioKawa.png" width="100%" alt="RadioKawa" onmousedown="return false;" />
-			<h1 class="img-title"></h1>
+<section class="subhead">
+	<div class="subhead-text">
+		<h1>Découvrez l'intégralité des podcasts de RadioKawa</h1>
+		<div class="subhead-button">
+			<button class="subhead-play">
+				<a href="/podcasts/radiokawa">Découvrir</a> 
+				<i class="fa fa-arrow-circle-right fa-3x"></i>
+			</button>
+		</div>	
+	</div>
+</section> 
+<div class="clearfix"></div>
+<div class="container">
+
+	<section class="newPod pull-left">
+		<div class="title-head">
+			<div class="pull-left">
+				<h2>Nouveaux podcasts</h2>
+			</div>
+			<div class="plus pull-right">
+				<!-- <a href="">Plus de nouveautés</a><i class="fa fa-chevron-right"></i> -->
+			</div>
 		</div>
-		<div class="bottom-content">
-			<section>
-				<div class="title-head">
-					<h2>Nouveaux podcasts</h2>
-					<span><a href="#">Plus de nouveautés</a></span>
+		<ul class="thumbnails">
+			<?php foreach ($podcasts as $podcast): ?>			
+			<li>
+				<div class="posted"> 
+					<h4><?php echo $podcast['category_name']; ?></h4>
+				</div>	
+				<div class="button-group">
+					<a href="<?php echo $podcast['guid']; ?>" class="audioelement toplaylist" data-id="<?php echo $podcast['emm_id']; ?>">
+						<button class="btn btn-add" title="Ajouter à la liste de lecture"> 
+							<i class="fa fa-plus"></i>
+						</button>
+					</a>
 				</div>
-				<ul class="thumbnails">
-					<li>
-						<figure>
-							<div class="container_playButton">
-								<div class="hole">
-									<div class="playButton">
-										<div class="triangle"><i class="fa fa-play fa-2x"></i></div>
-										<div class="lighter_triangle"></div>
-										<div class="darker_triangle"></div>
-									</div>
-								</div>
-							</div>
-							<a href="#"><img src="<?php echo $img_dir; ?>LesPlanetes.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Les Planètes</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<div class="container_playButton">
-								<div class="hole">
-									<div class="playButton">
-										<div class="triangle"><i class="fa fa-play fa-2x"></i></div>
-										<div class="lighter_triangle"></div>
-										<div class="darker_triangle"></div>
-									</div>
-								</div>
-							</div>
-							<a href="#"><img src="<?php echo $img_dir; ?>loljapon.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">LolJapon</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<div class="container_playButton">
-								<div class="hole">
-									<div class="playButton">
-										<div class="triangle"><i class="fa fa-play fa-2x"></i></div>
-										<div class="lighter_triangle"></div>
-										<div class="darker_triangle"></div>
-									</div>
-								</div>
-							</div>
-							<a href="#"><img src="<?php echo $img_dir; ?>LesPlanetes.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Les Planètes</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<div class="container_playButton">
-								<div class="hole">
-									<div class="playButton">
-										<div class="triangle"><i class="fa fa-play fa-2x"></i></div>
-										<div class="lighter_triangle"></div>
-										<div class="darker_triangle"></div>
-									</div>
-								</div>
-							</div>
-							<a href="#"><img src="<?php echo $img_dir; ?>loljapon.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">LolJapon</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<div class="container_playButton">
-								<div class="hole">
-									<div class="playButton">
-										<div class="triangle"><i class="fa fa-play fa-2x"></i></div>
-										<div class="lighter_triangle"></div>
-										<div class="darker_triangle"></div>
-									</div>
-								</div>
-							</div>
-							<a href="#"><img src="<?php echo $img_dir; ?>e-Dixit.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">E-dixit</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>MorceauxChoisis.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Morceaux Choisis</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>GaleriaLudica.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Galeria Ludica</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>MorceauxChoisis.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Morceaux Choisis</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>GaleriaLudica.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Galeria Ludica</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>MorceauxChoisis.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Morceaux Choisis</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>GaleriaLudica.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">RadioKawa</a></span>
-								<span class="titre"><a href="#">Galeria Ludica</a></span>
-							</figcaption>
-						</figure>
-					</li>
-				</ul>	
-				<div class="clearfix"></div>
-				<div class="title-head">
-					<h2>Derniers podcasts</h2>
-				</div>
-				<ul class="thumbnails">
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>PoR01/HotlineGianni.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">Auteur du podcast</a></span>
-								<span class="titre"><a href="#">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>PoR01/BoudoirGambetta.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">Auteur du podcast</a></span>
-								<span class="titre"><a href="#">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>	
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>PoR01/EmissionsSpeciales.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">Auteur du podcast</a></span>
-								<span class="titre"><a href="#">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>PoR01/InferieurATrois.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">Auteur du podcast</a></span>
-								<span class="titre"><a href="#">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<a href="#"><img src="<?php echo $img_dir; ?>PoR01/PasseleStick.jpg" alt="Podcast1" width="150" height="150" /></a>
-							<figcaption>
-								<span class="auteur"><a href="#">Auteur du podcast></a></span>
-								<span class="titre"><a href="#">Titre du podcast</a></span>
-							</figcaption>
-						</figure>
-					</li>
-				</ul>
-				<div class="clearfix"></div>
-			</section>
-			<section class="social">
-				<div>
-					<h3 class="sidebar-header">
-						<i class="fa fa-group fa-2x"></i>
-						<span>Activité de mes amis</span>
-					</h3>
-					<div class="suggestionAmi">
-						<ul class="list">
-							<li>
-								<div>
-									<div>
-										<img src="<?php echo 	$img_dir; ?>ami1.jpg" 	width="80" height="80">
-									</div>
-									<div class="titreAmi">
-										<h3>James Plain</h3>
-									</div>
-									<div class="stats">
-										<span>3000 abonnés</span>
-										<button><i class=" fa fa-plus"></i>Suivre</button>
-									</div>
-								</div>
-							</li>
-						</ul>
+				<figure>
+					<div class="buttonplay">
+						<a href="<?php echo $podcast['guid']; ?>" class="audioelement toplay" data-id="<?php echo $podcast['emm_id']; ?>"></a>
 					</div>
-				</div>
-			</section>
+						<img src="<?php echo $podcast['image']; ?>" alt="<?php echo $podcast['podcast_title']; ?>" width="160" height="160" />
+					<figcaption>
+						<span class="titre"><a href="/podcasts/<?php echo $podcast['name']; ?>/<?php echo slugify(str_replace(' ', '', $podcast['podcast_title'])); ?>/" rel="tab"><?php echo $podcast['podcast_title']; ?></a></span>
+						<span class="auteur"><a href="/podcasts/<?php echo $podcast['name']; ?>/" rel="tab"><?php echo $podcast['author']; ?></a></span>
+					</figcaption>
+				</figure>
+			</li> 
+		<?php endforeach ?>
+		</ul>
+	</section>	
+	<section class="newEmission pull-left">
+		<div class="title-head">
+			<div class="pull-left">
+				<h2>Dernières émissions</h2>
+			</div>
+			<div class="plus pull-right">
+				<!-- <a href="">Plus d'émissions</a><i class="fa fa-chevron-right"></i> -->
+			</div>
 		</div>
+			<ul class="thumbnails"> 
+				<?php foreach ($emissions as $emission): ?>			
+					<li>
+						<div class="posted">
+							<h4><?php echo $emission['category_name']; ?></h4>
+						</div>	
+						<figure>
+							<a href="/podcasts/<?php echo $emission['name']; ?>/<?php echo slugify(str_replace(' ', '', $emission['podcast_title'])); ?>/" rel="tab">
+								<img src="<?php echo $emission['image']; ?>" alt="<?php echo $emission['podcast_title'] ?>" width="160" height="160" />
+							</a>
+							<figcaption>
+								<span class="titre"><a href="/podcasts/<?php echo $emission['name']; ?>/<?php echo slugify(str_replace(' ', '', $emission['podcast_title'])); ?>/" rel="tab"><?php echo $emission['podcast_title']; ?></a></span>
+								<span class="auteur"><a href="/podcasts/<?php echo $emission['name']; ?>/" rel="tab"><?php echo $emission['author']; ?></a></span>
+							</figcaption>
+						</figure>
+					</li>
+				<?php endforeach ?>
+			</ul>
+	</section> 
+</div>	
+<div class="clearfix"></div>
+<footer>
+<!-- 	<ul>
+		<li><a href="">Contact</a></li>
+		<li><a href="">Mentions Légales</a></li>
+	</ul> -->
+</footer>
+<div id="filter"></div> 
+
+<!-- SCRIPTS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<?php if(!isset($_GET['rel'])): ?>
+	<script src="<?php echo $js_dir; ?>reload.js?<?php echo time(); ?>"></script>
+<?php endif; ?>
+<script src="<?php echo $js_dir; ?>search.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>layout.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>player/player.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>player/myplayer.js?<?php echo time(); ?>"></script>
+<script src="<?php echo $js_dir; ?>connexionFB.js?<?php echo time(); ?>"></script>
+
+</body>
+</html>
 
